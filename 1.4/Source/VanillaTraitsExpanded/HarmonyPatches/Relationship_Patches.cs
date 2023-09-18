@@ -63,61 +63,28 @@ namespace VanillaTraitsExpanded
 	[HarmonyPatch(typeof(RelationsUtility), "TryDevelopBondRelation")]
 	public static class TryDevelopBondRelation_Patch
 	{
-		public static List<string> cats = new List<string>
-		{
-			"Cat",
-			"AEXP_CatSphynx",
-			"AEXP_CatSomali",
-			"AEXP_CatSiamese",
-			"AEXP_CatPersian",
-			"AEXP_CatNorwegianForest",
-			"AEXP_CatMunchkin",
-			"AEXP_CatMaineCoon",
-			"AEXP_CatBritishShorthair",
-			"AEXP_CatBengal",
-			"AEXP_CatAbyssinian",
-		};
-
-		public static List<string> dogs = new List<string>
-		{
-
-			"YorkshireTerrier",
-			"LabradorRetriever",
-			"Husky",
-			"AEXP_WelshTerrier",
-			"AEXP_Shih-Tzu",
-			"AEXP_Rottweiler",
-			"AEXP_Pug",
-			"AEXP_Poodle",
-			"AEXP_GreatDane",
-			"AEXP_GermanShepherd",
-			"AEXP_FrenchBulldog",
-			"AEXP_Corgi",
-			"AEXP_Chihuahua",
-			"AEXP_Beagle",
-		};
 		public static bool Prefix(Pawn humanlike, Pawn animal, ref float baseChance)
 		{
 			if (humanlike.HasTrait(VTEDefOf.VTE_CatPerson))
 			{
-				if (dogs.Contains(animal.def.defName))
+				if (Globals.dogs.Contains(animal.def.defName))
                 {
 					baseChance = 0f;
 					return false;
                 }
-				else if (cats.Contains(animal.def.defName))
+				else if (Globals.cats.Contains(animal.def.defName))
                 {
 					baseChance *= 4f;
                 }
 			}
 			else if (humanlike.HasTrait(VTEDefOf.VTE_DogPerson))
 			{
-				if (cats.Contains(animal.def.defName))
+				if (Globals.cats.Contains(animal.def.defName))
 				{
 					baseChance = 0f;
 					return false;
 				}
-				else if (dogs.Contains(animal.def.defName))
+				else if (Globals.dogs.Contains(animal.def.defName))
 				{
 					baseChance *= 4f;
 				}

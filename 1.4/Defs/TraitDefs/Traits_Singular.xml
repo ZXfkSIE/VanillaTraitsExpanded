@@ -192,9 +192,6 @@
 				<description>{PAWN_nameDef} has never felt nausea in {PAWN_possessive} life. Throwing up or food poisoning is foreign to {PAWN_objective}.</description>
 			</li>
 		</degreeDatas>
-		<conflictingTraits>
-			<li>VTE_Squeamish</li>
-		</conflictingTraits>
 	</TraitDef>
 
 	<TraitDef>
@@ -203,11 +200,13 @@
 		<degreeDatas>
 			<li>
 				<label>animal lover</label>
-				<description>{PAWN_nameDef} can't stand mistreatment of animals. {PAWN_pronoun} will feel happier being nuzzled or being a master to a bonded animal, but will be more deeply crushed when not master of a bonded animal or seeing one die. They also refuse to butcher.</description>
+				<description>{PAWN_nameDef} can't stand mistreatment of animals. {PAWN_pronoun} will feel happier being nuzzled or being a master to a bonded animal, but will be more deeply crushed when not master of a bonded animal or seeing one die. They also refuse to hunt and butcher.</description>
 			</li>
 		</degreeDatas>
 		<conflictingTraits>
 			<li>VTE_AnimalHater</li>
+			<li>VTE_Desensitized</li>
+			<li>Psychopath</li>
 		</conflictingTraits>
 	</TraitDef>
 
@@ -247,7 +246,7 @@
 				<label>rebel</label>
 				<description>{PAWN_nameDef} only plays by their own rules, and will roll their eyes and take it easy while doing any task they've been forced to do.</description>
 				<statFactors>
-					<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.25</CertaintyLossFactor>
+					<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.5</CertaintyLossFactor>
 				</statFactors>
 			</li>
 		</degreeDatas>
@@ -696,6 +695,9 @@
 				<description>{PAWN_nameDef} has grown tired of the world and needs to be constantly distracted to stop dark thoughts. {PAWN_possessive} bleak personality is a big downer and therefore it is very hard to become friends with them.</description>
 			</li>
 		</degreeDatas>
+		<conflictingTraits>
+			<li>NaturalMood</li>
+		</conflictingTraits>
 	</TraitDef>
 
 	<TraitDef>
@@ -710,9 +712,6 @@
 				</statFactors>
 			</li>
 		</degreeDatas>
-		<conflictingTraits>
-			<li>VTE_Squeamish</li>
-		</conflictingTraits>
 	</TraitDef>
 
 	<TraitDef>

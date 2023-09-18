@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationSequence">
+		<operations>
+		
+		<!--RimWorld\Data\Ideology\Defs\PreceptDefs\Precepts_Animal.xml-->
+		
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Ideology">
+				<xpath>/Defs/PreceptDef[defName="AnimalVenerated"]/comps/li[@Class="PreceptComp_UnwillingToDo" and eventDef="SlaughteredVeneratedAnimal"]</xpath>
+				<value>
+					<nullifyingTraits>
+						<li>VTE_AnimalHater</li>
+					</nullifyingTraits>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Ideology">
+				<xpath>/Defs/PreceptDef[defName="AnimalVenerated"]/comps/li[@Class="PreceptComp_UnwillingToDo" and eventDef="HuntedVeneratedAnimal"]</xpath>
+				<value>
+					<nullifyingTraits>
+						<li>VTE_AnimalHater</li>
+					</nullifyingTraits>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Ideology">
+				<xpath>/Defs/ThoughtDef[defName="AteVeneratedAnimalMeat"]</xpath>
+				<value>
+					<nullifyingTraits>
+						<li>VTE_AnimalHater</li>
+					</nullifyingTraits>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Ideology">
+				<xpath>/Defs/ThoughtDef[defName="TameVeneratedAnimalDied"]</xpath>
+				<value>
+					<nullifyingTraits>
+						<li>VTE_AnimalHater</li>
+					</nullifyingTraits>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Ideology">
+				<xpath>/Defs/ThoughtDef[defName="VeneratedAnimalsOnMapOrCaravan"]</xpath>
+				<value>
+					<nullifyingTraits>
+						<li>VTE_AnimalHater</li>
+					</nullifyingTraits>
+				</value>
+			</li>
+			
+		<!--RimWorld\Data\Ideology\Defs\PreceptDefs\Precepts_AnimalSlaughter.xml-->
+		
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Ideology">
+				<xpath>/Defs/PreceptDef[defName="AnimalSlaughter_Prohibited"]/comps/li[@Class="PreceptComp_UnwillingToDo" and eventDef="SlaughteredAnimal"]</xpath>
+				<value>
+					<nullifyingTraits>
+						<li>VTE_AnimalHater</li>
+					</nullifyingTraits>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Ideology">
+				<xpath>/Defs/ThoughtDef[defName="SlaughteredAnimal_Know_Prohibited"]</xpath>
+				<value>
+					<nullifyingTraits>
+						<li>VTE_AnimalHater</li>
+					</nullifyingTraits>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Ideology">
+				<xpath>/Defs/ThoughtDef[defName="SlaughteredAnimal_Know_Prohibited_Mood"]</xpath>
+				<value>
+					<nullifyingTraits>
+						<li>VTE_AnimalHater</li>
+					</nullifyingTraits>
+				</value>
+			</li>
+		
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Ideology">
+				<xpath>/Defs/ThoughtDef[defName="SlaughteredAnimal_Horrible"]</xpath>
+				<value>
+					<nullifyingTraits>
+						<li>VTE_AnimalHater</li>
+					</nullifyingTraits>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Ideology">
+				<xpath>/Defs/ThoughtDef[defName="SlaughteredAnimal_Know_Horrible"]</xpath>
+				<value>
+					<nullifyingTraits>
+						<li>VTE_AnimalHater</li>
+					</nullifyingTraits>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Ideology">
+				<xpath>/Defs/ThoughtDef[defName="SlaughteredAnimal_Know_Horrible_Mood"]</xpath>
+				<value>
+					<nullifyingTraits>
+						<li>VTE_AnimalHater</li>
+					</nullifyingTraits>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Ideology">
+				<xpath>/Defs/ThoughtDef[defName="SlaughteredAnimal_Disapproved"]</xpath>
+				<value>
+					<nullifyingTraits>
+						<li>VTE_AnimalHater</li>
+					</nullifyingTraits>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Ideology">
+				<xpath>/Defs/ThoughtDef[defName="SlaughteredAnimal_Know_Disapproved"]</xpath>
+				<value>
+					<nullifyingTraits>
+						<li>VTE_AnimalHater</li>
+					</nullifyingTraits>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Ideology">
+				<xpath>/Defs/ThoughtDef[defName="SlaughteredAnimal_Know_Disapproved_Mood"]</xpath>
+				<value>
+					<nullifyingTraits>
+						<li>VTE_AnimalHater</li>
+					</nullifyingTraits>
+				</value>
+			</li>
+			
+		<!--RimWorld\Data\Ideology\Defs\PreceptDefs\Precepts_KillingInnocentAnimals.xml-->
+		
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Ideology">
+				<xpath>/Defs/PreceptDef[defName="KillingInnocentAnimals_Abhorrent"]/comps/li[@Class="PreceptComp_UnwillingToDo" and eventDef="KilledInnocentAnimal"]/nullifyingTraits</xpath>
+				<value>
+					<li>VTE_AnimalHater</li>
+					<li>VTE_Desensitized</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Ideology">
+				<xpath>/Defs/ThoughtDef[defName="KilledInnocentAnimal_Know_Abhorrent"]/nullifyingTraits</xpath>
+				<value>
+					<li>VTE_AnimalHater</li>
+					<li>VTE_Desensitized</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Ideology">
+				<xpath>/Defs/ThoughtDef[defName="KilledInnocentAnimal_Know_Abhorrent_Mood"]/nullifyingTraits</xpath>
+				<value>
+					<li>VTE_AnimalHater</li>
+					<li>VTE_Desensitized</li>
+				</value>
+			</li>
+		
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Ideology">
+				<xpath>/Defs/ThoughtDef[defName="KilledInnocentAnimal_Horrible"]/nullifyingTraits</xpath>
+				<value>
+					<li>VTE_AnimalHater</li>
+					<li>VTE_Desensitized</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Ideology">
+				<xpath>/Defs/ThoughtDef[defName="KilledInnocentAnimal_Know_Horrible"]/nullifyingTraits</xpath>
+				<value>
+					<li>VTE_AnimalHater</li>
+					<li>VTE_Desensitized</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Ideology">
+				<xpath>/Defs/ThoughtDef[defName="KilledInnocentAnimal_Know_Horrible_Mood"]/nullifyingTraits</xpath>
+				<value>
+					<li>VTE_AnimalHater</li>
+					<li>VTE_Desensitized</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Ideology">
+				<xpath>/Defs/ThoughtDef[defName="KilledInnocentAnimal_Disapproved"]/nullifyingTraits</xpath>
+				<value>
+					<li>VTE_AnimalHater</li>
+					<li>VTE_Desensitized</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Ideology">
+				<xpath>/Defs/ThoughtDef[defName="KilledInnocentAnimal_Know_Disapproved"]/nullifyingTraits</xpath>
+				<value>
+					<li>VTE_AnimalHater</li>
+					<li>VTE_Desensitized</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Ideology">
+				<xpath>/Defs/ThoughtDef[defName="KilledInnocentAnimal_Know_Disapproved_Mood"]/nullifyingTraits</xpath>
+				<value>
+					<li>VTE_AnimalHater</li>
+					<li>VTE_Desensitized</li>
+				</value>
+			</li>
+			
+		</operations>
+	</Operation>
+</Patch>

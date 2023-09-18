@@ -48,6 +48,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Globals.cs" />
     <Compile Include="HarmonyPatches\Caravan_Patches.cs" />
     <Compile Include="HarmonyPatches\Damage_Patches.cs" />
     <Compile Include="HarmonyPatches\Destroy_Patch.cs" />
